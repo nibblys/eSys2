@@ -3,69 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio | DC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: Poppins, sans-serif;
+      font-family: 'Nunito', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: #FFFDF7;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     header {
-      background: #74A12E;
-      color: white;
-      padding: 30px 20px;
+      background: #A8C686;
+      color: #fff;
+      padding: 35px 20px;
       text-align: center;
-      border-bottom-left-radius: 120px;
-      border-bottom-right-radius: 120px;
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      position: relative;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.7rem;
     }
 
     header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
+      margin-top: 3px;
+      font-size: 1.3rem;
+    }
+
+    header::after {
+      content: "🐾";
+      font-size: 2.2rem;
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
     }
 
     main {
       flex: 1;
-      padding: 30px 50px;
+      padding: 40px 50px;
     }
 
     h2 {
-      color: #333;
+      color: #4d4d4d;
       text-align: left;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      font-weight: 800;
     }
 
     .projects {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
     }
 
     .project-card {
-      background: white; 
-      padding: 12px; 
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      flex: 1 1 calc(25% - 15px); 
-      min-width: 180px; 
-      max-width: 220px;
+      background: #fff; 
+      padding: 15px; 
+      border-radius: 20px; /* softer rounded edges */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      flex: 1 1 calc(25% - 20px); 
+      min-width: 200px; 
+      max-width: 240px;
       text-align: center;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 15px rgba(168,198,134,0.4); /* green glow */
     }
 
     .project-card h3 {
@@ -75,19 +86,31 @@
     }
 
     .project-card a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 12px;
+      background: #A8C686;
+      color: #fff;
+      border-radius: 12px;
       text-decoration: none;
-      color: #74A12E;
-      font-weight: normal;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .project-card a:hover {
+      background: #8AAE5D;
     }
 
     /* FOOTER */
     footer {
-      background: #333;
+      background: #7B5E57;
       color: white;
       text-align: center;
       padding: 3px;
       margin-top: auto;
+      position: relative;
     }
+
   </style>
 </head>
   

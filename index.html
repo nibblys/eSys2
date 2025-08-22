@@ -6,42 +6,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: Poppins, sans-serif; text-align: center; background: #f4f4f4; }
-    img { width: 150px; border-radius: 50%; margin-top: 20px; }
-    h1 { color: #333; }
-    .projects { margin-top: 30px; }
+    body {
+      font-family: Poppins, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #74A12E;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom-left-radius: 120px;
+      border-bottom-right-radius: 120px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 50px;
+    }
+
+    h2 {
+      color: #333;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
     .project-card {
       background: white; 
-      padding: 15px; 
-      margin: 10px auto; 
-      width: 60%; 
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      padding: 12px; 
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 calc(25% - 15px); 
+      min-width: 180px; 
+      max-width: 220px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #74A12E;
+      font-weight: normal;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 3px;
+      margin-top: auto;
     }
   </style>
 </head>
   
 <body>
-  <h1>Grazielle Nychole dela Cruz</h1>
-  <p>👋 A computer engineering student learning more about systems, embedded tech, and coding.</p>
+  <header>
+    <h1>Grazielle Nychole dela Cruz</h1>
+    <p>— mixing engineering with a taste of matcha 🍵</p>
+  </header>
 
-<h2>My Activities</h2>
-<div class="projects">
-  <div class="project-card">
-    <h3>Activity 1.1</h3>
-    <a href="activity1.1.html">View Activity 1.1</a>
-  </div>
-  <div class="project-card">
-    <h3>Activity 1.2</h3>
-    <a href="activity1.2.html">View Activity 1.2</a>
-  </div>
-  <div class="project-card">
-    <h3>Activity 2.1</h3>
-    <a href="activity2.1.html">View Activity 2.1</a>
-  </div>
-</div>
+  <main>
+    <h2>My Activities<i>!</i></h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Activity 1.1</h3>
+        <a href="activity1.1.html">View Activity 1.1</a>
+      </div>
+      <div class="project-card">
+        <h3>Activity 1.2</h3>
+        <a href="activity1.2.html">View Activity 1.2</a>
+      </div>
+      <div class="project-card">
+        <h3>Activity 2.1</h3>
+        <a href="activity2.1.html">View Activity 2.1</a>
+      </div>
+    </div>
+  </main>
 
-  <h2>Contact</h2>
-  <p>Email: s.graziellenychole.delacruz@sscr.edu</p>
+  <footer>
+    <p>Email: s.graziellenychole.delacruz@sscr.edu</p>
+  </footer>
 </body>
 </html>

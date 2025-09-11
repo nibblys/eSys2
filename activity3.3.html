@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+  <title>Triangle Type Checker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <STYLE>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff8f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #7FB77E;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #7FB77E, #D65A6C);
+      color: white;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </STYLE>
+</HEAD>
+
+<BODY>
+  <h1>Triangle Type Checker</h1>
+  <button onclick="checkTriangle()">Check Triangle</button>
+
+  <SCRIPT>
+    function checkTriangle() {
+      // window prompt for ALL sides
+      var a = prompt("Enter side A:");
+      var b = prompt("Enter side B:");
+      var c = prompt("Enter side C:");
+
+      // validate inputs (NaN = not a number)
+      if (isNaN(a) || isNaN(b) || isNaN(c) || a <= 0 || b <= 0 || c <= 0) {
+        alert("Please enter valid positive numbers for all sides!");
+        return;
+      }
+
+      a = Number(a);
+      b = Number(b);
+      c = Number(c);
+
+      determineTriangle(a, b, c);
+    }
+
+    function determineTriangle(a, b, c) {
+      if (a + b <= c || a + c <= b || b + c <= a) {
+        alert("The numbers do not form a valid triangle.");
+        return;
+      }
+
+      if (a === b && b === c) {
+        alert("The triangle is EQUILATERAL.");
+      } else if (a === b || a === c || b === c) {
+        alert("The triangle is ISOSCELES.");
+      } else {
+        alert("The triangle is SCALENE.");
+      }
+    }
+  </SCRIPT>
+</BODY>
+</HTML>

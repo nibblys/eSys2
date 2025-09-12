@@ -132,30 +132,33 @@
 </body>
 
 <script>
-  fetch('https://api.github.com/repos/nibblys/eSys2/contents')
-    .then(response => response.json())
-    .then(files => {
-      const container = document.querySelector('.projects');
+fetch('https://api.github.com/repos/nibblys/eSys2/contents')
+  .then(response => response.json())
+  .then(files => {
+    const container = document.querySelector('.projects');
 
-      files
-        .filter(file => /^activity\d+\.\d+\.html$/i.test(file.name))
-        .sort((a, b) => {
-          const [aMain, aSub] = a.name.match(/\d+/g).map(Number);
-          const [bMain, bSub] = b.name.match(/\d+/g).map(Number);
-          return aMain !== bMain ? aMain - bMain : aSub - bSub;
-        })
-        .forEach(file => {
-          const card = document.createElement('div');
-          card.className = 'project-card';
-          const title = file.name.replace('.html', '');
-          card.innerHTML = `
-            <h3>${title}</h3>
-            <a href="activities/${file.name}" target="_blank">View ${title}</a>
-          `;
-          container.appendChild(card);
-        });
-    })
-    .catch(error => console.error('Error fetching activity files:', error));
+    files
+      .filter(file => /^activity\d+\.\d+\.html$/i.test(file.name))
+      .sort((a, b) => {
+        const [aMain, aSub] = a.name.match(/\d+/g).map(Number);
+        const [bMain, bSub] = b.name.match(/\d+/g).map(Number);
+        return aMain !== bMain ? aMain - bMain : aSub - bSub;
+      })
+      .forEach(file => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+
+        const match = file.name.match(/activity(\d+\.\d+)\.html/i);
+        const title = match ? `Activity ${match[1]}` : file.name.replace('.html', '');
+
+        card.innerHTML = `
+          <h3>${title}</h3>
+          <a href="${file.name}" target="_blank">View ${title}</a>
+        `;
+        container.appendChild(card);
+      });
+  })
+  .catch(error => console.error('Error fetching activity files:', error));
 </script>
   
 </html>

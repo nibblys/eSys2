@@ -132,7 +132,7 @@
 </body>
 
 <script>
-  fetch('https://api.github.com/repos/nibblys/eSys2/contents/activities')
+  fetch('https://api.github.com/repos/nibblys/eSys2/contents')
     .then(response => response.json())
     .then(files => {
       const container = document.querySelector('.projects');
@@ -140,7 +140,6 @@
       files
         .filter(file => /^activity\d+\.\d+\.html$/i.test(file.name))
         .sort((a, b) => {
-          // Extract numbers from filenames
           const [aMain, aSub] = a.name.match(/\d+/g).map(Number);
           const [bMain, bSub] = b.name.match(/\d+/g).map(Number);
           return aMain !== bMain ? aMain - bMain : aSub - bSub;

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Portfolio | DC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -16,46 +16,114 @@
       min-height: 100vh;
     }
 
+    /* NAVBAR */
+    nav {
+      background: #A8C686;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #4d4d4d;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      margin-bottom: 60px;
+      scroll-margin-top: 100px; 
+     }
+
+    /* HEADER */
     header {
       background: #A8C686;
       color: #fff;
-      padding: 35px 20px;
-      text-align: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10%;
       border-bottom-left-radius: 100px;
       border-bottom-right-radius: 100px;
-      position: relative;
+    }
+    
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+    
+    .header-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .header-right {
+      flex: 2;
+      text-align: left;
+    }
+    
+    header .profile-pic {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.7rem;
+      font-size: 2.8rem;
+      font-weight: 800;
     }
 
     header p {
-      margin-top: 3px;
-      font-size: 1.3rem;
-    }
-
-    header::after {
-      content: "🐾";
-      font-size: 2.2rem;
-      position: absolute;
-      right: 20px;
-      bottom: 10px;
+      margin-top: 8px;
+      font-size: 1.2rem;
     }
 
     main {
       flex: 1;
-      padding: 40px 50px;
+      padding: 50px 10%;
+    }
+
+    section {
+      margin-bottom: 60px;
     }
 
     h2 {
       color: #4d4d4d;
-      text-align: left;
       margin-bottom: 20px;
       font-weight: 800;
+      font-size: 1.8rem;
     }
 
+    /* ABOUT */
+    .about {
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      line-height: 1.6;
+    }
+
+    /* ACTIVITIES */
     .projects {
       display: flex;
       flex-wrap: wrap;
@@ -64,39 +132,40 @@
 
     .project-card {
       background: #fff; 
-      padding: 15px; 
-      border-radius: 20px;
+      padding: 20px; 
+      border-radius: 18px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.08);
       flex: 1 1 calc(25% - 20px); 
-      min-width: 200px; 
-      max-width: 250px;
-      text-align: center;
+      min-width: 220px; 
+      max-width: 260px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
     .project-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 8px 15px rgba(168,198,134,0.4);
     }
-
     .project-card h3 {
-      margin: 10px 0;
-      font-size: 1rem;
+      margin: 0 0 10px;
+      font-size: 1.2rem;
       color: #333;
     }
-
+    .project-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 12px;
+    }
     .project-card a {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 6px;
       padding: 6px 12px;
       background: #A8C686;
       color: #fff;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 0.9rem;
       transition: background 0.2s ease;
     }
-
     .project-card a:hover {
       background: #8AAE5D;
     }
@@ -106,66 +175,101 @@
       background: #7B5E57;
       color: white;
       text-align: center;
-      padding: 3px;
+      padding: 15px;
       margin-top: auto;
-      position: relative;
     }
-
   </style>
 </head>
   
 <body>
-  <header>
-    <h1>Grazielle Nychole dela Cruz</h1>
-    <p>— blending code, creativity, and my love for matcha 🍵</p>
-  </header>
+  <!-- NAV -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+    <div class="header-left">
+      <img src="me.png" alt="pic" class="profile-pic">
+    </div>
+    <div class="header-right">
+      <h1>Grazielle Nychole dela Cruz</h1>
+      <p>— blending code, creativity, and my love for matcha 🍵</p>
+    </div>
+  </div>
+</header>
 
   <main>
-    <h2>My Activities<i>!</i></h2>
-    <div class="projects">
-    </div>
-    <div class="project-card">
-      <h3>Activity 4.1</h3>
-        <a href="http://luminasimulation.0hi.me/signup.php"
-           style="margin-right:6px;">Website Link</a>
-        <a href="https://drive.google.com/drive/folders/1Mz-fDz1znAcxy_irwZFFsVmw7LnER8js?usp=sharing"
-           style="margin-left:6px;">Drive Link</a>
-    </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me <i>!</i></h2>
+      <div class="about">
+        <p>Hello! I’m Grazie, a tech enthusiast passionate about <b>coding, creativity, and design</b>. 
+        This portfolio highlights my activities and projects for Embedded Systems 2 as I continue to grow as a developer and innovator. 
+        I enjoy building meaningful, user-friendly digital experiences with a creative touch.</p>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section id="activities">
+      <h2>My Activities <i>!</i></h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Activity 1.1</h3>
+          <p>Simple HTML document</p>
+          <a href="activity1.1.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 1.2</h3>
+          <p>Beethoven's Ninth Symphony</p>
+          <a href="activity1.2.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 2.1</h3>
+          <p>Resume</p>
+          <a href="activity2.1.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 2.2</h3>
+          <p>Schedule</p>
+          <a href="activity2.2.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 2.3</h3>
+          <p>Frame Website</p>
+          <a href="activity2.3.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 3.1</h3>
+          <p>Introduction to CSS</p>
+          <a href="activity3.1.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 3.2</h3>
+          <p>Inline & Embedded Styles</p>
+          <a href="activity3.2.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 3.3</h3>
+          <p>JavaScript Triangle Checker</p>
+          <a href="activity3.3.html">View</a>
+        </div>
+        <div class="project-card">
+          <h3>Activity 4.1</h3>
+          <p>PHP Activity</p>
+          <a href="http://luminasimulation.0hi.me/signup.php">Website</a>
+          <a href="https://drive.google.com/drive/folders/1Mz-fDz1znAcxy_irwZFFsVmw7LnER8js?usp=sharing">Drive</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <!-- FOOTER -->
+  <footer id="contact">
     <p>Email: s.graziellenychole.delacruz@sscr.edu</p>
   </footer>
 </body>
-
-<script>
-fetch('https://api.github.com/repos/nibblys/eSys2/contents')
-  .then(response => response.json())
-  .then(files => {
-    const container = document.querySelector('.projects');
-
-    files
-      .filter(file => /^activity\d+\.\d+\.html$/i.test(file.name))
-      .sort((a, b) => {
-        const [aMain, aSub] = a.name.match(/\d+/g).map(Number);
-        const [bMain, bSub] = b.name.match(/\d+/g).map(Number);
-        return aMain !== bMain ? aMain - bMain : aSub - bSub;
-      })
-      .forEach(file => {
-        const card = document.createElement('div');
-        card.className = 'project-card';
-
-        const match = file.name.match(/activity(\d+\.\d+)\.html/i);
-        const title = match ? `Activity ${match[1]}` : file.name.replace('.html', '');
-
-        card.innerHTML = `
-          <h3>${title}</h3>
-          <a href="${file.name}">View ${title}</a>
-        `;
-        container.appendChild(card);
-      });
-  })
-  .catch(error => console.error('Error fetching activity files:', error));
-</script>
-  
 </html>

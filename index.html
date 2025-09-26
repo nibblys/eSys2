@@ -170,6 +170,54 @@
       background: #8AAE5D;
     }
 
+    /* DROPDOWN */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      padding: 6px 12px;
+      background: #A8C686;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .dropbtn:hover {
+      background: #8AAE5D;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      min-width: 200px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     /* FOOTER */
     footer {
       background: #7B5E57;
@@ -245,12 +293,28 @@
         <div class="project-card">
           <h3>Activity 3.1</h3>
           <p>Introduction to CSS</p>
-          <a href="activity3.1.html">View</a>
+          <div class="dropdown">
+            <button class="dropbtn">View ▼</button>
+            <div class="dropdown-content">
+              <a href="activity3.1-CSSPRAC1.html">CSS Practice 1</a>
+              <a href="activity3.1-CSSPRAC2.html">CSS Practice 2</a>
+              <a href="activity3.1-CSSPRAC11.html">CSS Practice 11</a>
+              <a href="activity3.1-CSSPRAC22.html">CSS Practice 22</a>
+            </div>
+          </div>
         </div>
         <div class="project-card">
           <h3>Activity 3.2</h3>
           <p>Inline & Embedded Styles</p>
-          <a href="activity3.2.html">View</a>
+          <div class="dropdown">
+            <button class="dropbtn">View ▼</button>
+            <div class="dropdown-content">
+              <a href="activity3.2-CSSPRAC1_Embedded.html">CSSPRAC1 Embedded</a>
+              <a href="activity3.2-CSSPRAC1_Inline.html">CSSPRAC1 Inline</a>
+              <a href="activity3.2-CSSPRAC2_Embedded.html">CSSPRAC2 Embedded</a>
+              <a href="activity3.2-CSSPRAC2_Inline.html">CSSPRAC2 Inline</a>
+            </div>
+          </div>
         </div>
         <div class="project-card">
           <h3>Activity 3.3</h3>

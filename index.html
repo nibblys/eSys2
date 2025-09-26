@@ -357,7 +357,7 @@
 
     <!-- CONTACT -->
     <section id="contact">
-      <h2>Contact Me <i>!</i></i></h2>
+      <h2>Contact Me</h2>
       <div class="contact">
         <a href="mailto:s.graziellenychole.delacruz@sscr.edu">
           <i class="fas fa-envelope"></i> Email
@@ -376,5 +376,17 @@
   <footer>
     <p>© 2025 Grazielle Nychole dela Cruz. All rights reserved.</p>
   </footer>
+
+<script>
+window.addEventListener("load", () => {
+  // scroll to top on load
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  // remove hash lang
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname + window.location.search);
+  }
+});
+</script>
+  
 </body>
 </html>

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Portfolio | DC</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
@@ -101,10 +103,6 @@
     main {
       flex: 1;
       padding: 50px 10%;
-    }
-
-    section {
-      margin-bottom: 60px;
     }
 
     h2 {
@@ -218,12 +216,39 @@
       display: block;
     }
 
+    /* CONTACT BUTTONS */
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .contact a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background: #A8C686;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: background 0.2s ease;
+    }
+    .contact a:hover {
+      background: #8AAE5D;
+    }
+    .contact a i {
+      font-size: 1.2rem;
+    }
+
     /* FOOTER */
     footer {
       background: #7B5E57;
       color: white;
       text-align: center;
       padding: 15px;
+      font-size: 0.9rem;
       margin-top: auto;
     }
   </style>
@@ -237,18 +262,18 @@
     <a href="#contact">Contact</a>
   </nav>
 
-<!-- HEADER -->
-<header>
-  <div class="header-container">
-    <div class="header-left">
-      <img src="me.png" alt="pic" class="profile-pic">
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="header-left">
+        <img src="me.png" alt="pic" class="profile-pic">
+      </div>
+      <div class="header-right">
+        <h1>Grazielle Nychole dela Cruz</h1>
+        <p>— blending code, creativity, and my love for matcha 🍵</p>
+      </div>
     </div>
-    <div class="header-right">
-      <h1>Grazielle Nychole dela Cruz</h1>
-      <p>— blending code, creativity, and my love for matcha 🍵</p>
-    </div>
-  </div>
-</header>
+  </header>
 
   <main>
     <!-- ABOUT -->
@@ -329,11 +354,27 @@
         </div>
       </div>
     </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact">
+        <a href="mailto:s.graziellenychole.delacruz@sscr.edu">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.linkedin.com/in/grazielle-nychole/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/nibblys/" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
-  <footer id="contact">
-    <p>Email: s.graziellenychole.delacruz@sscr.edu</p>
+  <footer>
+    <p>© 2025 Grazielle Nychole dela Cruz. All rights reserved.</p>
   </footer>
 </body>
 </html>
